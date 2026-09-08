@@ -1,0 +1,12 @@
+# Ignore PDF files
+*.pdf
+
+# Ignore Microsoft Word files
+*.doc
+*.docx
+
+# Optional: ignore temporary Word files
+~$*.doc
+~$*.docx
+
+Final
