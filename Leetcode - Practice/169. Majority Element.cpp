@@ -1,3 +1,5 @@
+// Boyer–Moore version
+
 class Solution {
 public:
     int majorityElement(vector<int>& nums) {
