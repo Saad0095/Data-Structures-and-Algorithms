@@ -17,6 +17,11 @@ class List{
     private:
         Node* head;
         Node* tail;
+
+    public:
+        List(){
+            head = tail = NULL;
+        }
 };
 
 int main(){
