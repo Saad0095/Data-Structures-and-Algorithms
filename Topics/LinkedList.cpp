@@ -132,7 +132,7 @@ class List{
 				cout << " -> " << temp -> data;
 				temp = temp -> next;
 			}
-			cout << endl;
+            cout << "NULL" << endl;
 		}
 };
 
