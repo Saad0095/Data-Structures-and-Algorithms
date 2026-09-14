@@ -1,6 +1,5 @@
 # Ignore PDF files
 *.pdf
-
 # Ignore Microsoft Word files
 *.doc
 *.docx
@@ -10,3 +9,4 @@
 ~$*.docx
 
 Final
+Course outline.jpeg
