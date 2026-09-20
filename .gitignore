@@ -1,12 +1,21 @@
-# Ignore PDF files
+# Documents
 *.pdf
-# Ignore Microsoft Word files
 *.doc
 *.docx
-
-# Optional: ignore temporary Word files
 ~$*.doc
 ~$*.docx
 
+# Specific files/folders
+Final/
 Final
 Course outline.jpeg
+
+# C++ build files
+*.exe
+*.out
+*.o
+*.obj
+build/
+
+# VS Code
+.vscode/
