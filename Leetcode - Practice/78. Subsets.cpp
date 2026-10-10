@@ -28,3 +28,5 @@ int main(){
     
     return 0;
 }
+
+// https://chatgpt.com/share/6ac3b0d7-b9e0-83ee-b6f2-2db89fababb0
