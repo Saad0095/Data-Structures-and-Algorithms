@@ -7,6 +7,11 @@
 
 # Specific files/folders
 Final/
+Final-Project/
+Final-Project
+!Final-Project/
+!Final-Project/ResQRoute - Intelligent Emergency Routing & Ambulance Dispatch/
+!Final-Project/ResQRoute - Intelligent Emergency Routing & Ambulance Dispatch/**
 Final
 Course outline.jpeg
 
