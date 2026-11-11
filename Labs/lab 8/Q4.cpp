@@ -1,55 +1,48 @@
-#include <iostream>
-#include <vector>
+#include<bits/stdc++.h>
 using namespace std;
 
-struct Node
-{
-    int data;
-    Node *left, *right;
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+ * };
+ */
 
-    Node(int value)
-    {
-        data = value;
-        left = right = NULL;
+class Solution {
+public:
+    int preIndex = 0;
+
+    TreeNode* build(vector<int>& preorder, vector<int>& inorder, int start, int end) {
+
+        if (start > end) return NULL;
+
+        int val = preorder[preIndex++];
+        TreeNode* root = new TreeNode(val);
+
+        int mid = start;
+
+        while (inorder[mid] != val) {
+            mid++;
+        }
+
+        root->left = build(preorder, inorder, start, mid - 1);
+        root->right = build(preorder, inorder, mid + 1, end);
+
+        return root;
+    }
+
+    TreeNode* buildTree(vector<int>& preorder, vector<int>& inorder) {
+        return build(preorder, inorder, 0, inorder.size() - 1);
     }
 };
 
-Node *build(vector<int> preorder, vector<int> inorder,
-            int start, int end, int &index)
-{
-    if (start > end)
-        return NULL;
 
-    Node *root = new Node(preorder[index++]);
-    int position = start;
-
-    while (inorder[position] != root->data)
-        position++;
-
-    root->left = build(preorder, inorder, start, position - 1, index);
-    root->right = build(preorder, inorder, position + 1, end, index);
-    return root;
-}
-
-void postorder(Node *root)
-{
-    if (root == NULL)
-        return;
-
-    postorder(root->left);
-    postorder(root->right);
-    cout << root->data << " ";
-}
-
-int main()
-{
-    vector<int> preorder = {3, 9, 20, 15, 7};
-    vector<int> inorder = {9, 3, 15, 20, 7};
-    int index = 0;
-
-    Node *root = build(preorder, inorder, 0, inorder.size() - 1, index);
-
-    cout << "Post-order traversal: ";
-    postorder(root);
-    cout << endl;
+int main(){
+    
+    return 0;
 }
